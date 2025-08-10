@@ -6,7 +6,7 @@ import argparse
 import requests
 
 def get_stats(url):
-    response = requests.get('https://accountws.arin.net/public/rest/waitingList')
+    response = requests.get(url)
     response.raise_for_status()
 
     waitlist = response.json()
